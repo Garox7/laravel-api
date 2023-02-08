@@ -1,10 +1,14 @@
-const body = document.querySelector('body');
-    sidebar = body.querySelector('.admin-sidebar');
-    toggle = body.querySelector('.toggle');
-    searchBtn = body.querySelector('.search-box');
-    modeSwitch = body.querySelector('.toggle-switch');
-    modeText = body.querySelector('.mode-text');
+require('./bootstrap');
 
+///////////////////////// My JS //////////////////////
+const body = document.querySelector('body');
+sidebar = body.querySelector('.admin-sidebar');
+toggle = body.querySelector('.toggle');
+searchBtn = body.querySelector('.search-box');
+modeSwitch = body.querySelector('.toggle-switch');
+modeText = body.querySelector('.mode-text');
+
+if(sidebar && toggle && searchBtn && modeSwitch && modeText) {
     toggle.addEventListener('click', () => {
         sidebar.classList.toggle('close');
     });
@@ -22,4 +26,6 @@ const body = document.querySelector('body');
             modeText.innerHTML = 'Dark Mode';
         }
     })
+}
+
 
